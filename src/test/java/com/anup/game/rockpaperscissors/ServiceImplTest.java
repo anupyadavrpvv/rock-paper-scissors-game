@@ -25,13 +25,13 @@ public class ServiceImplTest {
 
     private RoundRepository roundRepository;
 
-    private GameService classUnderTest;
+    private GameService gameService;
 
     @Before
     public void setup() {
         gameRepository = mock(GameRepository.class);
         roundRepository = mock(RoundRepository.class);
-        classUnderTest = new GameServiceImpl(gameRepository, roundRepository);
+        gameService = new GameServiceImpl(gameRepository, roundRepository);
     }
 
 
@@ -42,7 +42,7 @@ public class ServiceImplTest {
         when(gameRepository.findById(any())).thenReturn(Optional.empty());
 
         // when
-        classUnderTest.getStatus(1L);
+        gameService.getStatus(1L);
     }
 
     @Test(expected = GameOverException.class)
@@ -55,7 +55,7 @@ public class ServiceImplTest {
         when(gameRepository.findById(any())).thenReturn(Optional.ofNullable(givenGame));
 
         // when
-        classUnderTest.play(givenId, Choice.getRandom(), Choice.getRandom());
+        gameService.play(givenId, Choice.getRandom(), Choice.getRandom());
 
     }
 }
