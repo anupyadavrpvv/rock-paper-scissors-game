@@ -1,6 +1,7 @@
-##Rock-Paper-Scissor Game
+####Rock-Paper-Scissor Game
 
-This project is based on Spring boot application 
+This project is based on Java Spring boot which is application to 
+play game rock-paper-scissors
 
 #### Technology used
 - Java 8 : programming language 
