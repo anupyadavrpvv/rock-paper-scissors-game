@@ -1,4 +1,4 @@
-#### Rock-Paper-Scissor Game
+#### Rock-Paper-Scissors-Game
 
 This project is based on Java Spring boot which is application to 
 play game rock-paper-scissors
